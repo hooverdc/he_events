@@ -8,4 +8,6 @@ RUN pip install -r requests.txt
 
 COPY src .
 
-CMD ["python", "main.py"]
+COPY entrypoint.sh .
+
+ENTRYPOINT [ "./entrypoint.sh" ]
